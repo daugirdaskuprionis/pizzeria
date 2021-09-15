@@ -8,41 +8,50 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <form class="pizzaForm">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required maxlength="30">
-        </div>
-        <div>
-          <label for="price">Price</label>
-          <input type="number" name="price" id="price" required min="0" step=".01">
-        </div>
-        <div>
-          <label for="heat">Heat</label>
-          <input id="heat" type="number" name="heat" min="1" max="3">
-        </div>
-        <div>
-          <span class="toppingsLabel">
-            <label for="toppings" >Toppings</label>
-            <input id="toppings" type="text" name="toppings[]" required>
-            <input id="toppings" type="text" name="toppings[]" required>
-          </span>
-          <button class="toppingButton">Add Topping</button>
-        </div>
-        <div>
-          <label for="photo">Photo</label>
-          <select name="photo" id="photo">
-            <option value="no-photo">No photo</option>
-            <option value="pizza1">Pizza1</option>
-            <option value="pizza2">Pizza2</option>
-            <option value="pizza3">Pizza3</option>
-          </select>
-        </div>
-        <div>
-          <input type="submit" class="pizzaSubmit" value="Add pizza">
-        </div>
-      </form>
-  <ul class="displayMenu"></ul>
+  <form class="pizzaForm">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required maxlength="30">
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" required min="0" step=".01">
+      </div>
+      <div>
+        <label for="heat">Heat</label>
+        <input id="heat" type="number" name="heat" min="1" max="3">
+      </div>
+      <div>
+        <span class="toppingsLabel">
+          <label for="toppings" >Toppings</label>
+          <input id="toppings" type="text" name="toppings[]" required>
+          <input id="toppings" type="text" name="toppings[]" required>
+        </span>
+        <button class="toppingButton">Add Topping</button>
+      </div>
+      <div>
+        <label for="photo">Photo</label>
+        <select name="photo" id="photo">
+          <option value="no-photo">No photo</option>
+          <option value="pizza1">Pizza1</option>
+          <option value="pizza2">Pizza2</option>
+          <option value="pizza3">Pizza3</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" class="pizzaSubmit" value="Add pizza">
+      </div>
+    </form>
+    <div class="sortBy">
+      <label>Sort by</label>
+      <select class="sortBySelection">
+        <option>Name</option>
+        <option>Price</option>
+        <option>Heat</option>
+      </select>
+      <button class="sortButton">Select</button>
+    </div>
+    <ul class="displayMenu"></ul>
 </body>
 <script src="./script.js"></script>
 </html>
