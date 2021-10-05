@@ -67,7 +67,6 @@ document.querySelector('.pizzaForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     if (checkName(document.getElementById('name').value) == false) { return false; }
-    if (document.getElementById('name').length == null) { alert("Name field must have value."); return false; }
 
     pizza = {
         name: document.getElementById('name').value,
@@ -76,6 +75,8 @@ document.querySelector('.pizzaForm').addEventListener('submit', function(e) {
         toppings: toppings(),
         photo: document.getElementById('photo').value
     }
+
+    console.log(pizza);
 
     menu.push(pizza);
     sessionStorage.setItem('pizza', JSON.stringify(menu));
